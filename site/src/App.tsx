@@ -8,19 +8,18 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="container m-8 max-w-2xl">
       <h1>Notes</h1>
       {Object.entries(structure).map(([semester, courses]) => (
-        <div key={semester} className="semester">
+        <div key={semester} className="mt-4">
           <h2>{semester}</h2>
           {Object.entries(courses).map(([course, files]) => (
-            <div key={course} className="course">
+            <div key={course} className="mt-2">
               <h3>{course}</h3>
-              <div className="files">
+              <div>
                 {(files as string[]).map((file) => (
                   <div
                     key={file}
-                    className="file"
                     onClick={() => handleFileClick(semester, course, file)}
                   >
                     📄 {file}
