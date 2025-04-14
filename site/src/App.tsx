@@ -1,3 +1,4 @@
+import "./index.css"
 import structure from '../structure.json'
 
 function App() {
