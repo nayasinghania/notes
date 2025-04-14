@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import structure from '../structure.json'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const handleFileClick = (semester: string, course: string, file: string) => {
+    window.location.href = `/${semester}/${course}/${file}`
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <h1>Notes</h1>
+      {Object.entries(structure).map(([semester, courses]) => (
+        <div key={semester} className="semester">
+          <h2>{semester}</h2>
+          {Object.entries(courses).map(([course, files]) => (
+            <div key={course} className="course">
+              <h3>{course}</h3>
+              <div className="files">
+                {(files as string[]).map((file) => (
+                  <div
+                    key={file}
+                    className="file"
+                    onClick={() => handleFileClick(semester, course, file)}
+                  >
+                    📄 {file}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
   )
 }
 
