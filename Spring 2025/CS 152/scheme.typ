@@ -9,7 +9,7 @@
 ( + 1 2 )
 ```
 
-= Other Arithmetic Operations
+= Other Arithmetic Operation
 #cols[
 - quotient
 - remainder
