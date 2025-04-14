@@ -1,0 +1,41 @@
+---
+tags:
+  - cs152
+---
+## Rules
+- Open book
+- No internet access
+- No artificial intelligence
+- No collaboration
+## Topics
+- Regular Expressions
+- Verilog Coding
+	- Focus on Semantics
+- Assembly $\Leftarrow\Rightarrow$ Machine Language
+	- Instruction Modes
+- Assembly Coding Examples on the slides
+- Grammars
+	- Parse Trees
+	- AST
+	- BNF
+	- EBNF
+	- Syntax Diagrams
+	- Valid/Invalid Grammar
+	- Ambiguity
+- Draw schematics from logic expressions and vice versa
+- Activation Records
+	- In Execution
+	- After Compilation
+- Simple Programming Snippets
+	- Outputs
+	- Compile Errors
+- Pointers
+- Stack Assignment Swaps
+- Other Manipulations
+- Anonymous Function
+	- Lambda
+	- Eval Expression
+	- Currying
+- Scoping
+	- Static
+	- Dynamic

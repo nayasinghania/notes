@@ -1,0 +1,11 @@
+---
+tags:
+  - musc13
+---
+- Features
+	- Mixer
+	- FX
+	- Processor
+	- Digital Recording
+	- Software Instruments
+	- Editing Sequencing

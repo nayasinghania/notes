@@ -1,0 +1,19 @@
+---
+tags:
+  - assignment
+  - ling21
+---
+- M & Ms
+- Trump and Hitler
+	- Equivocation
+- Lexus
+	- Inappropriate appeal to authority
+- Old Man
+- Herding Cats
+- Steve Tyler
+- Racoon Mayhem
+	- Scare tactics
+- Old Spice
+- Cable Ditch
+- Witch Trial
+	- Slippery slope

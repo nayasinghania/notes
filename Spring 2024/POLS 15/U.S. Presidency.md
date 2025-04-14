@@ -1,0 +1,77 @@
+---
+tags:
+  - pols15
+---
+
+United States President
+
+- Joseph R. Biden
+- Head of State
+  - Represents the United States in foreign countries and at home
+  - Receives other heads of state
+  - Recognize other nations
+  - Appoints United State ambassadors to other nationals and to the United Nations
+  - Negotiates treaties
+  - Much of this work is done through the Department of State
+  - Secretary of State
+    - Antony J. Blinken
+- Legislator
+  - Article II
+    - Section 3
+      - State of the union address
+        - Policy agenda announced
+      - Recommend legislation
+        - “Going public”
+          - Communication strategy
+        - “Bully pulpit”
+          - Platform for advocating an agenda
+  - Can veto legislation passed by Congress (subject to congressional override)
+- Commander in Chief
+  - Some argue that Congress’s Article I power to declare ware is a “hollow” check
+  - The president can commit troops and engage in hostilities
+    - Korean War
+    - Vietnam War
+    - Gulf War
+    - Iraq War
+    - Afghanistan
+- Constitution Chief Executive
+  - Article II
+    - Section 1
+      - Head of the bureaucracy
+      - Appoints the cabinet, heads of departments and independent agencies
+      - Through the OMB, prepares a federal budget
+        - Congress has to pass it
+      - Can issue executive orders to the federal bureaucracy
+- Bureaucracy Control
+  - FDR
+    - “Central clearance”
+    - All executive agency proposals, reports, and recommendations to Congress must be certified by the OMB
+  - Reagan
+    - “Cost-benefit analysis”
+  - Trump
+    - “One-in two out”
+  - Organization
+    - Executive Office of the President	
+      - OMB
+        - Director
+        - Shalanda Young
+        - Prepares budget
+          - Monitors federal agencies (Congress does not)
+          - Information on enrolled bills
+            - The enrolled bill goes to the OMB before going to the president and they give the president information about the bill
+          - Central clearance-communication with Congress
+      - NSC
+      - Council of Economic Advisors
+      - White House Office
+        - Jeff Zienta, Chief of Staff
+- Check on Federal Judiciary
+  - Article II
+    - Section 2
+      - The president appoints United States Supreme Court justices (and judges on federal courts established by Congress)
+        - Confirmed by United States Senate
+      - The president has the power to pardon
+        - Except in the case of impeachment
+
+United States Vice President
+
+- Kamala Harris
