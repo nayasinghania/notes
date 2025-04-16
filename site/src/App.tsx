@@ -14,11 +14,13 @@ const FileTreeItem = ({
   content,
   depth = 0,
   path = [],
+  defaultOpen = false,
 }: {
   name: string;
   content: FileStructure;
   depth?: number;
   path?: string[];
+  defaultOpen?: boolean;
 }) => {
   const indent = "\u00A0".repeat(depth * 4);
 
@@ -32,7 +34,11 @@ const FileTreeItem = ({
   if (!hasSubdirs && hasFiles) {
     // Render files-only view
     return (
-      <Accordion type="single" collapsible>
+      <Accordion
+        type="single"
+        collapsible
+        defaultValue={defaultOpen ? name : undefined}
+      >
         <AccordionItem value={name}>
           <AccordionTrigger className="hover:no-underline hover:cursor-pointer">
             {indent}
@@ -58,7 +64,11 @@ const FileTreeItem = ({
   } else {
     // Render mixed content or directories-only view
     return (
-      <Accordion type="single" collapsible>
+      <Accordion
+        type="single"
+        collapsible
+        defaultValue={defaultOpen ? name : undefined}
+      >
         <AccordionItem value={name}>
           <AccordionTrigger className="hover:no-underline hover:cursor-pointer">
             {indent}
@@ -106,7 +116,12 @@ function App() {
     <div className="container m-8 max-w-[90%]">
       <h1>Notes</h1>
       {(structure as [string, FileStructure][]).map(([name, content]) => (
-        <FileTreeItem key={name} name={name} content={content} />
+        <FileTreeItem
+          key={name}
+          name={name}
+          content={content}
+          defaultOpen={name === "Spring 2025"}
+        />
       ))}
     </div>
   );
