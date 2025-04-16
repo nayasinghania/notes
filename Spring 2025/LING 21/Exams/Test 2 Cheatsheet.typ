@@ -72,3 +72,8 @@ Mistakes in reasoning that occur because the premises, though logically relevant
 / Weak Analogy : When an arguer compares two (or more) things that aren’t really comparable in relevant respects.
 
 / Inconsistency : When an arguer asserts inconsistent or contradictory claims.
+
+== Language
+/ Vagueness : A word of phrase is vague when its meanning is fuzzy and inexact
+/ Overgenerality : Words are over general if the information they provide us too broad and unspecific in a given context
+/ Ambiguity : A word expression is ambiguous if it has two or more distinct meanings and the context does not make clear which meaning is intended
