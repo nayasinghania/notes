@@ -24,6 +24,10 @@ const FileTreeItem = ({
 }) => {
   const indent = "\u00A0".repeat(depth * 4);
 
+  const formatFile = (name: string) => {
+    return name.split(".")[0];
+  };
+
   const handleFileClick = (file: string) => {
     const fullPath = [...path, name, file].join("/");
     window.location.href = `/${fullPath}`;
@@ -56,7 +60,7 @@ const FileTreeItem = ({
                 onClick={() => handleFileClick(file)}
                 className="cursor-pointer pb-4"
               >
-                {indent}&nbsp;&nbsp;&nbsp;&nbsp;{file}
+                {indent}&nbsp;&nbsp;&nbsp;&nbsp;{formatFile(file as string)}
               </div>
             ))}
           </AccordionContent>
@@ -100,7 +104,7 @@ const FileTreeItem = ({
                     onClick={() => handleFileClick(file as string)}
                     className="cursor-pointer pb-4"
                   >
-                    {indent}&nbsp;&nbsp;&nbsp;&nbsp;{file as string}
+                    {indent}&nbsp;&nbsp;&nbsp;&nbsp;{formatFile(file as string)}
                   </div>
                 ))}
           </AccordionContent>

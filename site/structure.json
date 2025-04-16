@@ -16,7 +16,14 @@
               "Sickle Cell Disease.pdf"
             ]
           ],
-          ["BIOL 54", ["9-11.pdf", "9-18.pdf", "9-4.pdf"]],
+          [
+            "BIOL 54",
+            [
+              "9-11.pdf",
+              "9-18.pdf",
+              "9-4.pdf"
+            ]
+          ],
           [
             "CS 46B",
             [
@@ -167,7 +174,14 @@
               "Vectors.pdf"
             ]
           ],
-          ["METR 10", ["LO2.pdf", "LO3.pdf", "LO4.pdf"]],
+          [
+            "METR 10",
+            [
+              "LO2.pdf",
+              "LO3.pdf",
+              "LO4.pdf"
+            ]
+          ],
           [
             "POLS  15",
             [
@@ -241,7 +255,12 @@
       [
         "LING 21",
         [
-          ["Exams", ["Test 2 Cheatsheet.pdf"]],
+          [
+            "Exams",
+            [
+              "Test 2 Cheatsheet.pdf"
+            ]
+          ],
           "1 - Dangerous Ideas.pdf",
           "2 - Trigger Warnings.pdf",
           "3 - Presupposition.pdf",
