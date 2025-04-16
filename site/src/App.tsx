@@ -7,95 +7,106 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-function App() {
-  const handleFileClick = (semester: string, course: string, file: string) => {
-    window.location.href = `/${semester}/${course}/${file}`;
-  };
+type FileStructure = string[] | [string, FileStructure][];
 
+const FileTreeItem = ({
+  name,
+  content,
+  depth = 0,
+  path = [],
+}: {
+  name: string;
+  content: FileStructure;
+  depth?: number;
+  path?: string[];
+}) => {
+  const indent = "\u00A0".repeat(depth * 4);
+
+  // Check if the content contains any arrays (subdirectories)
+  const hasSubdirs =
+    Array.isArray(content) && content.some((item) => Array.isArray(item));
+  // Check if the content contains any strings (files)
+  const hasFiles =
+    Array.isArray(content) && content.some((item) => typeof item === "string");
+
+  if (!hasSubdirs && hasFiles) {
+    // Render files-only view
+    return (
+      <Accordion type="single" collapsible>
+        <AccordionItem value={name}>
+          <AccordionTrigger className="hover:no-underline hover:cursor-pointer">
+            {indent}
+            {name}
+          </AccordionTrigger>
+          <AccordionContent>
+            {(content as string[]).map((file) => (
+              <div
+                key={file}
+                onClick={() => {
+                  const fullPath = [...path, name, file].join("/");
+                  window.location.href = `/${fullPath}`;
+                }}
+                className="cursor-pointer"
+              >
+                {indent}&nbsp;&nbsp;&nbsp;&nbsp;{file}
+              </div>
+            ))}
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    );
+  } else {
+    // Render mixed content or directories-only view
+    return (
+      <Accordion type="single" collapsible>
+        <AccordionItem value={name}>
+          <AccordionTrigger className="hover:no-underline hover:cursor-pointer">
+            {indent}
+            {name}
+          </AccordionTrigger>
+          <AccordionContent>
+            {/* Then render subdirectories */}
+            {hasSubdirs &&
+              (content as (string | [string, FileStructure])[])
+                .filter((item) => Array.isArray(item))
+                .map(([childName, childContent]) => (
+                  <FileTreeItem
+                    key={childName}
+                    name={childName}
+                    content={childContent}
+                    depth={depth + 1}
+                    path={[...path, name]}
+                  />
+                ))}
+            {/* Render files first */}
+            {hasFiles &&
+              (content as (string | [string, FileStructure])[])
+                .filter((item) => typeof item === "string")
+                .map((file) => (
+                  <div
+                    key={file as string}
+                    onClick={() => {
+                      const fullPath = [...path, name, file].join("/");
+                      window.location.href = `/${fullPath}`;
+                    }}
+                    className="cursor-pointer pb-4"
+                  >
+                    {indent}&nbsp;&nbsp;&nbsp;&nbsp;{file}
+                  </div>
+                ))}
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    );
+  }
+};
+
+function App() {
   return (
     <div className="container m-8 max-w-[90%]">
       <h1>Notes</h1>
-
-      {Object.entries(structure).map(([section, semesters]) => (
-        <Accordion type="single" collapsible key={section}>
-          <AccordionItem value={section}>
-            {" "}
-            <AccordionTrigger className="hover:no-underline hover:cursor-pointer">
-              {section}
-            </AccordionTrigger>
-            <AccordionContent>
-              {section === "Archive" &&
-                Object.entries(semesters).map(([semester, courses]) => (
-                  <Accordion type="single" collapsible key={semester}>
-                    <AccordionItem value={semester}>
-                      <AccordionTrigger className="hover:no-underline hover:cursor-pointer">
-                        &nbsp;&nbsp;&nbsp;&nbsp;{semester}
-                      </AccordionTrigger>
-                      <AccordionContent>
-                        {Object.entries(courses).map(([course, files]) => (
-                          <Accordion type="single" collapsible key={course}>
-                            <AccordionItem value={course}>
-                              <AccordionTrigger className="hover:no-underline hover:cursor-pointer">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                {course}
-                              </AccordionTrigger>
-                              <AccordionContent>
-                                <div>
-                                  {(files as string[]).map((file) => (
-                                    <div
-                                      key={file}
-                                      onClick={() =>
-                                        handleFileClick(
-                                          "Archive/" + semester,
-                                          course,
-                                          file,
-                                        )
-                                      }
-                                      className="cursor-pointer"
-                                    >
-                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                      {file}
-                                    </div>
-                                  ))}
-                                </div>
-                              </AccordionContent>
-                            </AccordionItem>
-                          </Accordion>
-                        ))}
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                ))}
-
-              {section !== "Archive" &&
-                Object.entries(semesters).map(([course, files]) => (
-                  <Accordion type="single" collapsible key={course}>
-                    <AccordionItem value={course}>
-                      <AccordionTrigger className="hover:no-underline hover:cursor-pointer">
-                        &nbsp;&nbsp;&nbsp;&nbsp;{course}
-                      </AccordionTrigger>
-                      <AccordionContent>
-                        <div>
-                          {(files as string[]).map((file) => (
-                            <div
-                              key={file}
-                              onClick={() =>
-                                handleFileClick("Spring 2025", course, file)
-                              }
-                              className="cursor-pointer"
-                            >
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              {file}
-                            </div>
-                          ))}
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                ))}
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+      {(structure as [string, FileStructure][]).map(([name, content]) => (
+        <FileTreeItem key={name} name={name} content={content} />
       ))}
     </div>
   );

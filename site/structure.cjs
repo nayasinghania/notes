@@ -1,37 +1,48 @@
 const fs = require("fs");
 const path = require("path");
 
-function generateDirectoryTree(startPath) {
-  let result = {};
+function getDirectoryStructure(dirPath) {
+  const items = fs.readdirSync(dirPath);
+  const directories = [];
+  const files = [];
 
-  try {
-    const items = fs.readdirSync(startPath);
+  // First separate items into directories and files
+  for (const item of items) {
+    const fullPath = path.join(dirPath, item);
+    const stats = fs.statSync(fullPath);
 
-    items.forEach((item) => {
-      const itemPath = path.join(startPath, item);
-      const stats = fs.statSync(itemPath);
-
-      if (stats.isDirectory()) {
-        result[item] = generateDirectoryTree(itemPath);
-      } else {
-        // If this is the first file in this directory, create an array
-        if (!Array.isArray(result)) {
-          result = [];
-        }
-        result.push(item);
-      }
-    });
-
-    return result;
-  } catch (err) {
-    console.error(`Error reading directory: ${err}`);
-    return {};
+    if (stats.isDirectory()) {
+      // If it's a directory, recursively get its structure
+      const subStructure = getDirectoryStructure(fullPath);
+      directories.push([item, subStructure]);
+    } else {
+      // If it's a file, add to files array
+      files.push(item);
+    }
   }
+
+  // Sort directories by name
+  directories.sort((a, b) => a[0].localeCompare(b[0]));
+
+  // Sort files alphabetically
+  files.sort((a, b) => a.localeCompare(b));
+
+  // Combine directories and files with directories first
+  return [...directories, ...files];
 }
 
-const publicPath = path.join(__dirname, "public");
-const structure = generateDirectoryTree(publicPath);
+try {
+  const publicDir = path.join(__dirname, "public");
+  const structure = getDirectoryStructure(publicDir);
 
-fs.writeFileSync("structure.json", JSON.stringify(structure, null, 2), "utf-8");
+  // Write the structure to a JSON file with pretty formatting
+  fs.writeFileSync(
+    path.join(__dirname, "structure.json"),
+    JSON.stringify(structure, null, 2),
+    "utf8",
+  );
 
-console.log("Directory structure has been saved to structure.json");
+  console.log("Structure has been written to structure.json");
+} catch (error) {
+  console.error("Error:", error.message);
+}

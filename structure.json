@@ -1,0 +1,223 @@
+{
+  "Archive": {
+    "Fall 2023": {
+      "BIOL 10": [
+        "Cancer.pdf",
+        "Climate Change.pdf",
+        "Energy Drinks.pdf",
+        "GMOs.pdf",
+        "Influenza.pdf",
+        "Sickle Cell Disease.pdf"
+      ],
+      "BIOL 54": [
+        "9-11.pdf",
+        "9-18.pdf",
+        "9-4.pdf"
+      ],
+      "CS 46B": [
+        "8-21.pdf",
+        "9-11.pdf",
+        "9-18.pdf",
+        "Final Exam Studying.pdf",
+        "Midterm 2 Studying.pdf"
+      ],
+      "MATH 42": [
+        "1.1-1.3.pdf",
+        "1.4-1.7.pdf",
+        "1.5.pdf",
+        "1.8.pdf",
+        "1.9.pdf",
+        "2.1 (1).png",
+        "2.1 (2).png",
+        "2.1-2.2.pdf",
+        "2.1.png",
+        "2.2-2.4.pdf",
+        "2.4, 4.1-4.3.pdf",
+        "5.1-5.2.pdf",
+        "6.1-6.4.pdf",
+        "7.1.pdf",
+        "7.2-7.3.pdf",
+        "9.1.pdf",
+        "Final Review.pdf"
+      ]
+    },
+    "Fall 2024": {
+      "CS 151": [
+        "Custom Data Structures.pdf",
+        "Design Patterns.pdf",
+        "GUI.pdf",
+        "Multithreading.pdf",
+        "Pillars of OOP.pdf",
+        "Recap.pdf",
+        "Streams.pdf"
+      ],
+      "GEOL 7": [
+        "1 - Minerals.pdf",
+        "10 - Classification.pdf",
+        "11 - Evolution.pdf",
+        "12 - Earth's Formation.pdf",
+        "13 - Faults and Folds.pdf",
+        "14 - Plate Tectonics.pdf",
+        "15 - Abiogenesis and the Precambrian Earth.pdf",
+        "16 - Paleozoic Invertebrates.pdf",
+        "17 - Paleozoic Vertebrates.pdf",
+        "18 - Mesozoic Vertebrates.pdf",
+        "2 - Igneous Rocks.pdf",
+        "4 - Sedimentary Rocks.pdf",
+        "6 - Dating.pdf",
+        "7 - The Geological Timescale.pdf",
+        "8, 9 - Fossils and the Fossil Record.pdf"
+      ],
+      "MATH 161A": [
+        "Chapter 1.pdf",
+        "Chapter 2.pdf",
+        "Chapter 3.pdf",
+        "Chapter 4.pdf",
+        "Chapter 5.pdf",
+        "Chapter 6.pdf",
+        "Chapter 7.pdf",
+        "Chapter 8.pdf"
+      ],
+      "MUSC 19": [
+        "Music of Africa.pdf",
+        "Music of Asia.pdf",
+        "Music of India.pdf",
+        "Music of Latin America.pdf",
+        "Music of Native America.pdf",
+        "Music of Southeast Asia.pdf"
+      ]
+    },
+    "Spring 2024": {
+      "CS 146": [
+        "Module 0.pdf",
+        "Module 1.pdf",
+        "Module 2.pdf",
+        "Module 3.pdf",
+        "Module 4.pdf",
+        "Module 5.pdf"
+      ],
+      "MATH 39": [
+        "Dot Products and Orthogonality 1.pdf",
+        "Dot Products and Orthogonality.pdf",
+        "IMG_9042.jpg",
+        "IMG_9130.jpg",
+        "IMG_9131.jpg",
+        "IMG_9132.jpg",
+        "IMG_9133.jpg",
+        "IMG_9134.jpg",
+        "Linear_Algebra_Notes_Week_1.pdf",
+        "Linear_Algebra_Notes_Week_10_Day_1.pdf",
+        "Linear_Algebra_Notes_Week_10_Day_2.pdf",
+        "Linear_Algebra_Notes_Week_11_Day_1.pdf",
+        "Linear_Algebra_Notes_Week_11_Day_2.pdf",
+        "Linear_Algebra_Notes_Week_12_Day_1.pdf",
+        "Linear_Algebra_Notes_Week_12_Day_2.pdf",
+        "Linear_Algebra_Notes_Week_13_Day_1.pdf",
+        "Linear_Algebra_Notes_Week_14_Day_1.pdf",
+        "Linear_Algebra_Notes_Week_14_Day_2.pdf",
+        "Linear_Algebra_Notes_Week_15_Day_1.pdf",
+        "Linear_Algebra_Notes_Week_15_Day_2.pdf",
+        "Linear_Algebra_Notes_Week_2.pdf",
+        "Linear_Algebra_Notes_Week_3.pdf",
+        "Linear_Algebra_Notes_Week_4.pdf",
+        "Linear_Algebra_Notes_Week_5.pdf",
+        "Linear_Algebra_Notes_Week_6.pdf",
+        "Linear_Algebra_Notes_Week_7_Day_1.pdf",
+        "Linear_Algebra_Notes_Week_7_Day_2.pdf",
+        "Linear_Algebra_Notes_Week_9_Day_1.pdf",
+        "Linear_Algebra_Notes_Week_9_Day_2.pdf",
+        "Matrixes.pdf",
+        "Maximizers and Minimizers 1.pdf",
+        "Maximizers and Minimizers.pdf",
+        "Null Space 1.pdf",
+        "Null Space.pdf",
+        "Systems_of_Equations.pdf",
+        "Vectors.pdf"
+      ],
+      "METR 10": [
+        "LO2.pdf",
+        "LO3.pdf",
+        "LO4.pdf"
+      ],
+      "POLS  15": [
+        "Bureaucracy.pdf",
+        "California Institutions.pdf",
+        "California State Courts.pdf",
+        "Civil Liberties.pdf",
+        "Civil Rights.pdf",
+        "Congress.pdf",
+        "Federalism.pdf",
+        "The Declaration of Independence and the Articles of Confederation.pdf",
+        "The Federal Courts.pdf",
+        "U.S. Presidency.pdf",
+        "Voting.pdf",
+        "midterm study guide.pdf"
+      ]
+    }
+  },
+  "Spring 2025": {
+    "AAS 1": [
+      "Asian Americans.pdf",
+      "Orientalism.pdf",
+      "Race.pdf",
+      "Yellow Peril.pdf"
+    ],
+    "CS 152": [
+      "Assembly.pdf",
+      "Functions, Function Implementation, and Memory Management.pdf",
+      "Grammar.pdf",
+      "Introduction.pdf",
+      "Lambda Calculus Handout.pdf",
+      "Lambda Calculus Tutorial.pdf",
+      "Lambda Calculus.pdf",
+      "Programming Languages.pdf",
+      "Programming Paradigms.pdf",
+      "Symbolic Logic.pdf",
+      "Verilog.pdf",
+      "scheme.pdf"
+    ],
+    "CS 47": [
+      "ALU.pdf",
+      "Assembler Directives.pdf",
+      "Assembler, Linker, Loader.pdf",
+      "Comparison, Branch, and Jump.pdf",
+      "Frame Pointers.pdf",
+      "Homework 3.pdf",
+      "MIPS Assembly.pdf",
+      "Memory.pdf",
+      "Midterm.pdf",
+      "Number Systems.pdf",
+      "Processors.pdf",
+      "Programming a Computer.pdf",
+      "Stack.pdf",
+      "Subroutines.pdf",
+      "boolean-algebra.pdf"
+    ],
+    "LING 21": [
+      "1 - Dangerous Ideas.pdf",
+      "2 - Trigger Warnings.pdf",
+      "3 - Presupposition.pdf",
+      "Basic Logical Concepts.pdf",
+      "Introduction to Critical Thinking.pdf",
+      "Language.pdf",
+      "Logical Fallacies - 1.pdf",
+      "Logical Fallacies - II.pdf",
+      "Real Life Fallacies.pdf",
+      "Recognizing Arguments.pdf"
+    ],
+    "MUSC 13": [
+      "ADSR.pdf",
+      "Audio Interface.pdf",
+      "Cables.pdf",
+      "DAW.pdf",
+      "Effects and Processing.pdf",
+      "Microphones.pdf",
+      "Mixers.pdf",
+      "Physics of Sound.pdf",
+      "Pre-Amp.pdf",
+      "Psychoacoustics.pdf",
+      "Recording.pdf",
+      "Signal Flow.pdf"
+    ]
+  }
+}
