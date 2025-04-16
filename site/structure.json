@@ -213,7 +213,7 @@
           "Lambda Calculus.pdf",
           "Programming Languages.pdf",
           "Programming Paradigms.pdf",
-          "scheme.pdf",
+          "Scheme.pdf",
           "Symbolic Logic.pdf",
           "Verilog.pdf"
         ]
@@ -224,7 +224,7 @@
           "ALU.pdf",
           "Assembler Directives.pdf",
           "Assembler, Linker, Loader.pdf",
-          "boolean-algebra.pdf",
+          "Boolean Algebra.pdf",
           "Comparison, Branch, and Jump.pdf",
           "Frame Pointers.pdf",
           "Homework 3.pdf",
@@ -241,7 +241,7 @@
       [
         "LING 21",
         [
-          ["Exams", ["test-2-cheatsheet.pdf"]],
+          ["Exams", ["Test 2 Cheatsheet.pdf"]],
           "1 - Dangerous Ideas.pdf",
           "2 - Trigger Warnings.pdf",
           "3 - Presupposition.pdf",

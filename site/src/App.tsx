@@ -24,6 +24,11 @@ const FileTreeItem = ({
 }) => {
   const indent = "\u00A0".repeat(depth * 4);
 
+  const handleFileClick = (file: string) => {
+    const fullPath = [...path, name, file].join("/");
+    window.location.href = `/${fullPath}`;
+  };
+
   // Check if the content contains any arrays (subdirectories)
   const hasSubdirs =
     Array.isArray(content) && content.some((item) => Array.isArray(item));
@@ -48,11 +53,8 @@ const FileTreeItem = ({
             {(content as string[]).map((file) => (
               <div
                 key={file}
-                onClick={() => {
-                  const fullPath = [...path, name, file].join("/");
-                  window.location.href = `/${fullPath}`;
-                }}
-                className="cursor-pointer"
+                onClick={() => handleFileClick(file)}
+                className="cursor-pointer pb-4"
               >
                 {indent}&nbsp;&nbsp;&nbsp;&nbsp;{file}
               </div>
@@ -95,13 +97,10 @@ const FileTreeItem = ({
                 .map((file) => (
                   <div
                     key={file as string}
-                    onClick={() => {
-                      const fullPath = [...path, name, file].join("/");
-                      window.location.href = `/${fullPath}`;
-                    }}
+                    onClick={() => handleFileClick(file as string)}
                     className="cursor-pointer pb-4"
                   >
-                    {indent}&nbsp;&nbsp;&nbsp;&nbsp;{file}
+                    {indent}&nbsp;&nbsp;&nbsp;&nbsp;{file as string}
                   </div>
                 ))}
           </AccordionContent>
