@@ -146,3 +146,47 @@ $ ovr(ovr(X)Y ovr(Z) + ovr(X) ovr(Y) Z) = (ovr(ovr(X) Y ovr(Z))) *  (ovr(X) ovr(
   "1", "1", "1", "X'+Y'+Z'", $M_7$,
 )
 
+= Karnaugh Maps (K-maps)
+- A visual tool for simplifying boolean expressions
+- Organizes minterms in a grid
+- Adjacent cells represent minterms that differ by only one variable
+== Benefits
+- Simplifies complex boolean expressions quickly
+== Usage
+1. Create the maps
+- Determine the number of variables (n)
+- Create a $2^n$ celled grid
+- Label the rows and columns with binary values
+2. Plot the minterms
+- Place a 1 in the cell corresponding to each minterm
+3. Group the 1s
+- Group adjacent 1s in powers of 2 (1, 2, 4, 8, etc.)
+- Groups should be as large as possible
+- Groups can wrap around the edges of the K-map
+4. Write the simplified expression
+- Write a product term for each group (terms that remain constant in the group)
+- The product term includes variables that remain constant within the group
+- Combine the product terms using the OR operator
+== Simplification Rules
+1. We can either group 0s with 0s or 1s with 1s but we cannot groups 0s and 1s, and x's representing don't cares can be grouped with 0s as well as 1s
+2. Groups may overlap each other
+3. A group must contains a number of cells that is a power of 2, so only groups with $2^n$ cells are allowed
+4. Groups can only be horizontal or vertical, not diagonal or any other shape
+5. Each group should be as large as possible
+6. Opposite grouping and corner groupings are allowed
+7. There should be as few groups as possible
+== #ex
+1. 
+$F(A,B,C,D)=sum m(0,1,2,5,7,8,9,10,13,15)$
+#table(
+  columns: (auto, auto, auto, auto, auto),
+  table.header("",$ovr(C D)$, $ovr(C)D$, $C D$, $C ovr(D)$),
+  $ovr(A B)$, "1", "1", "", "1",
+  $ovr(A)B$, "", "1", "1", "",
+  $A B$, "", "1", "1", "",
+  $A ovr(B)$, "1", "1", "", "1",
+)
+$F(A,B,C,D)=B D + C'D + B'D'$
+
+== Implicants
+- A product term is an implicant of the function if the unction has value 1 or all minterms of the product term (also defined as a single 1 or a group of adjacent 1s that can be combined)
