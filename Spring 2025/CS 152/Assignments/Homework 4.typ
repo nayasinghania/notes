@@ -29,7 +29,7 @@ $=[z:=lb y. y y]((lb z.(lb y. y y)z))$
 
 $=(lb y. y y)(lb y. y y)$
 
-$=Omega$ combinator (becuase of the nonterminating recursion)
+$=Omega$ combinator (because of the nonterminating recursion)
 
 == Question 2
 Prove the following
@@ -63,14 +63,32 @@ $=11$
 
 == Question 4
 Write a Scheme function named elements which counts the number of elements in a list
+- See attached file `q4.scm`
+
+Example Input  
+#image("../Images/Question 4 Input.png")
+Example Output
+#image("../Images/Question 4 Output.png")
 
 == Question 5
 
 === a) 
-Write a scheme function that calculates the inner producct of two vectors
+Write a scheme function that calculates the inner product of two vectors
+- See attached file `q5a.scm`
+
+Example Input
+#image("../Images/Question 5a Input.png")
+Example Output
+#image("../Images/Question 5a Output.png")
 
 === b)
 Implement function interleave in scheme, which expects as arguments two lists xs and ys, and returns
 a single list obtained by choosing elements alternately, first from xs and then from ys. When either
 xs or ys runs out, interleave takes the remaining elements from the other list, so that the elements of
 the result are exactly the elements of the two argument lists taken together.
+- See attached file `q5b.scm`
+
+Example Input
+#image("../Images/Question 5b Input.png")
+Example Output
+#image("../Images/Question 5b Output.png")
